@@ -1,0 +1,7 @@
+:HL["/_next/static/chunks/7aa7138076d86f58.css","style"]
+:HL["/_next/static/chunks/d5c06848acd99580.css","style"]
+:HL["/_next/static/chunks/ffc320d1e5e483b9.css","style"]
+:HL["/logo1.svg","image"]
+:HL["https://svgsilh.com/png-512/2071331.png","image"]
+:HL["https://www.pngplay.com/wp-content/uploads/5/Instagram-Black-Logo-PNG.png","image"]
+0:{"buildId":"Z-qi5NHc_7xT7C42uWMLY","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"nfc-tool","paramType":null,"paramKey":"nfc-tool","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

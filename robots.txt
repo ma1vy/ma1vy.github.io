@@ -1,0 +1,12 @@
+User-Agent: *
+Allow: /
+Disallow: /cart
+Disallow: /checkout
+
+User-Agent: Google-Extended
+Allow: /
+
+User-Agent: GPTBot
+Allow: /
+
+Sitemap: https://ma1vy.github.io/sitemap.xml

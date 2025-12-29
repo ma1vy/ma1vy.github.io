@@ -1,0 +1,30 @@
+1:"$Sreact.fragment"
+2:I[15103,["/_next/static/chunks/7a1aec6f72f722d9.js","/_next/static/chunks/2fb4ae95f21ad6de.js","/_next/static/chunks/5afdf35211684a88.js"],"default"]
+8:I[21228,["/_next/static/chunks/7a1aec6f72f722d9.js","/_next/static/chunks/2fb4ae95f21ad6de.js","/_next/static/chunks/5afdf35211684a88.js"],""]
+9:I[30757,["/_next/static/chunks/419e1eeb8249fdc6.js","/_next/static/chunks/5b9a306237b8c786.js"],"OutletBoundary"]
+a:"$Sreact.suspense"
+:HL["/_next/static/chunks/1606471604c628fd.css","style"]
+3:Ta16,<h3 id="introduction">Introduction to Writing UPI Links</h3><p>Unified Payments Interface (UPI) is a popular instant payment system. By writing a UPI link to an NFC tag, you can create a 'tap-to-pay' experience where users can quickly initiate a payment to you from their smartphone.</p><p>You can use our <a href="/upi">Free UPI QR & Link Generator</a> to create the correct URL format.</p><h3 id="code-example">Code Example</h3><p>A UPI payment link is just a specific type of URL. You can write it to a tag using the same method as a standard URL record.</p><pre><code class="language-js hljs"><span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">writeUpiLink</span>(<span class="hljs-params">upiUrl</span>) {
+  <span class="hljs-keyword">if</span> (!(<span class="hljs-string">&#x27;NDEFReader&#x27;</span> <span class="hljs-keyword">in</span> <span class="hljs-variable language_">window</span>)) {
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Web NFC is not supported by this browser.&#x27;</span>);
+    <span class="hljs-keyword">return</span>;
+  }
+  <span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">const</span> writer = <span class="hljs-keyword">new</span> <span class="hljs-title class_">NDEFReader</span>();
+    <span class="hljs-keyword">await</span> writer.<span class="hljs-title function_">write</span>({
+      <span class="hljs-attr">records</span>: [{ <span class="hljs-attr">recordType</span>: <span class="hljs-string">&#x27;url&#x27;</span>, <span class="hljs-attr">data</span>: upiUrl }]
+    });
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;UPI link written successfully!&#x27;</span>);
+  } <span class="hljs-keyword">catch</span> (error) {
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">&#x27;Error writing UPI link:&#x27;</span>, error);
+  }
+}
+
+<span class="hljs-comment">// Example usage:</span>
+<span class="hljs-comment">// const upiLink = &#x27;upi://pay?pa=your-upi-id@okhdfcbank&amp;pn=Your%20Name&amp;am=10.00&amp;cu=INR&#x27;;</span>
+<span class="hljs-comment">// writeUpiLink(upiLink);</span></code></pre><h3 id="use-cases">Use Cases</h3><ul><li>Accepting contactless payments at a physical store.</li><li>Collecting donations at an event.</li><li>Allowing friends to easily pay you back.</li></ul>0:{"buildId":"Z-qi5NHc_7xT7C42uWMLY","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"page-module__AFzsIa__documentationContainer","children":["$","article",null,{"className":"page-module__AFzsIa__guide","children":[["$","h1",null,{"className":"page-module__AFzsIa__guideTitle","children":"How to Write a UPI Link"}],["$","$L2",null,{"children":["$","div",null,{"className":"page-module__AFzsIa__guideContent","dangerouslySetInnerHTML":{"__html":"$3"}}]}],["$","a",null,{"href":"https://github.com/vimal-verma/Studio Infinix.org/edit/main/app/documentation/guides/write-upi-record.json","target":"_blank","rel":"noopener noreferrer","className":"page-module__AFzsIa__editLink","children":"✏️ Edit this page on GitHub"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"TechArticle\",\"headline\":\"How to Write a UPI Link to an NFC Tag\",\"description\":\"Create a 'tap-to-pay' experience by writing a UPI payment link to an NFC tag. Learn how with our Web NFC API guide and code examples.\",\"url\":\"https://ma1vy.github.io/documentation/write-upi-record\",\"author\":{\"@type\":\"Organization\",\"name\":\"Studio Infinix.org\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Studio Infinix.org\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://ma1vy.github.io/logo1.svg\"}},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://ma1vy.github.io/documentation/write-upi-record\"}}"}}],"$L4"]}]}],["$L5","$L6"],"$L7"]}],"loading":null,"isPartial":false}
+4:["$","div",null,{"className":"page-module__AFzsIa__pagination","children":[["$","$L8",null,{"href":"/documentation/write-vcard-record","className":"page-module__AFzsIa__prevLink","children":["← ","How to Write a vCard"]}],["$","$L8",null,{"href":"/documentation/lock-nfc","className":"page-module__AFzsIa__nextLink","children":["How to Lock an NFC Tag"," →"]}]]}]
+5:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1606471604c628fd.css","precedence":"next"}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/5afdf35211684a88.js","async":true}]
+7:["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]
+b:null

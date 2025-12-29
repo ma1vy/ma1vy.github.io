@@ -1,0 +1,39 @@
+1:"$Sreact.fragment"
+2:I[15103,["/_next/static/chunks/7a1aec6f72f722d9.js","/_next/static/chunks/2fb4ae95f21ad6de.js","/_next/static/chunks/5afdf35211684a88.js"],"default"]
+a:I[21228,["/_next/static/chunks/7a1aec6f72f722d9.js","/_next/static/chunks/2fb4ae95f21ad6de.js","/_next/static/chunks/5afdf35211684a88.js"],""]
+b:I[30757,["/_next/static/chunks/419e1eeb8249fdc6.js","/_next/static/chunks/5b9a306237b8c786.js"],"OutletBoundary"]
+c:"$Sreact.suspense"
+:HL["/_next/static/chunks/1606471604c628fd.css","style"]
+3:Tbe6,<h3>How to Read an NFC Tag</h3><p>To read an NFC tag, you create an instance of <code>NDEFReader</code> and call its <code>scan()</code> method. This returns a promise that resolves when a scan is initiated. The 'reading' event is fired whenever a new NDEF message is read.</p><pre><code class="language-js hljs"><span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">readNfcTag</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">if</span> (!(<span class="hljs-string">&#x27;NDEFReader&#x27;</span> <span class="hljs-keyword">in</span> <span class="hljs-variable language_">window</span>)) {
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Web NFC is not supported by this browser.&#x27;</span>);
+    <span class="hljs-keyword">return</span>;
+  }
+  <span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">const</span> reader = <span class="hljs-keyword">new</span> <span class="hljs-title class_">NDEFReader</span>();
+    <span class="hljs-keyword">await</span> reader.<span class="hljs-title function_">scan</span>();
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Scan started successfully.&#x27;</span>);
+
+    reader.<span class="hljs-property">onreading</span> = <span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> {
+      <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;NDEF message read.&#x27;</span>);
+      <span class="hljs-keyword">const</span> { serialNumber } = event;
+      <span class="hljs-keyword">const</span> { records } = event.<span class="hljs-property">message</span>;
+      <span class="hljs-comment">// Process the records here</span>
+      records.<span class="hljs-title function_">forEach</span>(<span class="hljs-function"><span class="hljs-params">record</span> =&gt;</span> {
+        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`Record type:  <span class="hljs-subst">${record.recordType}</span>`</span>);
+        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`MIME type:    <span class="hljs-subst">${record.mediaType}</span>`</span>);
+        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`Record id:      <span class="hljs-subst">${record.id}</span>`</span>);
+        <span class="hljs-comment">// ... and so on</span>
+      });
+    };
+  } <span class="hljs-keyword">catch</span> (error) {
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">&#x27;Error starting scan:&#x27;</span>, error);
+  }
+}</code></pre>0:{"buildId":"Z-qi5NHc_7xT7C42uWMLY","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"page-module__AFzsIa__documentationContainer","children":["$","article",null,{"className":"page-module__AFzsIa__guide","children":[["$","h1",null,{"className":"page-module__AFzsIa__guideTitle","children":"How to Read an NFC Tag"}],["$","$L2",null,{"children":["$","div",null,{"className":"page-module__AFzsIa__guideContent","dangerouslySetInnerHTML":{"__html":"$3"}}]}],"$L4","$L5","$L6"]}]}],["$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
+4:["$","a",null,{"href":"https://github.com/vimal-verma/Studio Infinix.org/edit/main/app/documentation/guides/read-nfc.json","target":"_blank","rel":"noopener noreferrer","className":"page-module__AFzsIa__editLink","children":"✏️ Edit this page on GitHub"}]
+5:["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"TechArticle\",\"headline\":\"How to Read an NFC Tag\",\"description\":\"Learn how to read data from an NFC tag using the Web NFC API. This guide includes a code example demonstrating how to initiate a scan and handle the data read from the tag.\",\"url\":\"https://ma1vy.github.io/documentation/read-nfc\",\"author\":{\"@type\":\"Organization\",\"name\":\"Studio Infinix.org\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Studio Infinix.org\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://ma1vy.github.io/logo1.svg\"}},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://ma1vy.github.io/documentation/read-nfc\"}}"}}]
+6:["$","div",null,{"className":"page-module__AFzsIa__pagination","children":[["$","$La",null,{"href":"/documentation/browser-support","className":"page-module__AFzsIa__prevLink","children":["← ","Browser Support"]}],["$","$La",null,{"href":"/documentation/write-text-record","className":"page-module__AFzsIa__nextLink","children":["How to Write a Text Record"," →"]}]]}]
+7:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1606471604c628fd.css","precedence":"next"}]
+8:["$","script","script-0",{"src":"/_next/static/chunks/5afdf35211684a88.js","async":true}]
+9:["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]
+d:null

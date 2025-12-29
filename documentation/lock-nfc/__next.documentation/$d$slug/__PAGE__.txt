@@ -1,0 +1,25 @@
+1:"$Sreact.fragment"
+2:I[15103,["/_next/static/chunks/7a1aec6f72f722d9.js","/_next/static/chunks/2fb4ae95f21ad6de.js","/_next/static/chunks/5afdf35211684a88.js"],"default"]
+4:I[21228,["/_next/static/chunks/7a1aec6f72f722d9.js","/_next/static/chunks/2fb4ae95f21ad6de.js","/_next/static/chunks/5afdf35211684a88.js"],""]
+9:I[30757,["/_next/static/chunks/419e1eeb8249fdc6.js","/_next/static/chunks/5b9a306237b8c786.js"],"OutletBoundary"]
+a:"$Sreact.suspense"
+:HL["/_next/static/chunks/1606471604c628fd.css","style"]
+3:T73e,<h3>How to Lock an NFC Tag (Make Read-Only)</h3><p>Locking a tag prevents it from being rewritten, which is useful for permanent installations. This is an option within the <code>write()</code> method. <strong>Warning: This action is irreversible.</strong></p><pre><code class="language-js hljs"><span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">writeAndLockNfcTag</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">const</span> writer = <span class="hljs-keyword">new</span> <span class="hljs-title class_">NDEFReader</span>();
+    <span class="hljs-keyword">await</span> writer.<span class="hljs-title function_">write</span>(
+      { <span class="hljs-attr">records</span>: [{ <span class="hljs-attr">recordType</span>: <span class="hljs-string">&#x27;text&#x27;</span>, <span class="hljs-attr">data</span>: <span class="hljs-string">&#x27;This is a permanent message.&#x27;</span> }] },
+      { <span class="hljs-attr">overwrite</span>: <span class="hljs-literal">false</span> } <span class="hljs-comment">// Prevent writing to a tag that already has data</span>
+    );
+    <span class="hljs-comment">// After writing, you can make the tag permanently read-only.</span>
+    <span class="hljs-keyword">await</span> writer.<span class="hljs-title function_">makeReadOnly</span>();
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Tag written and locked successfully!&#x27;</span>);
+  } <span class="hljs-keyword">catch</span> (error) {
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">&#x27;Error locking tag:&#x27;</span>, error);
+  }
+}</code></pre>0:{"buildId":"Z-qi5NHc_7xT7C42uWMLY","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"page-module__AFzsIa__documentationContainer","children":["$","article",null,{"className":"page-module__AFzsIa__guide","children":[["$","h1",null,{"className":"page-module__AFzsIa__guideTitle","children":"How to Lock an NFC Tag"}],["$","$L2",null,{"children":["$","div",null,{"className":"page-module__AFzsIa__guideContent","dangerouslySetInnerHTML":{"__html":"$3"}}]}],["$","a",null,{"href":"https://github.com/vimal-verma/Studio Infinix.org/edit/main/app/documentation/guides/lock-nfc.json","target":"_blank","rel":"noopener noreferrer","className":"page-module__AFzsIa__editLink","children":"✏️ Edit this page on GitHub"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"TechArticle\",\"headline\":\"How to Lock an NFC Tag (Make Read-Only)\",\"description\":\"Learn how to lock an NFC tag to make it read-only using the Web NFC API. This guide includes a code example and important warnings about the irreversible nature of locking tags.\",\"url\":\"https://ma1vy.github.io/documentation/lock-nfc\",\"author\":{\"@type\":\"Organization\",\"name\":\"Studio Infinix.org\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Studio Infinix.org\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://ma1vy.github.io/logo1.svg\"}},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://ma1vy.github.io/documentation/lock-nfc\"}}"}}],["$","div",null,{"className":"page-module__AFzsIa__pagination","children":[["$","$L4",null,{"href":"/documentation/write-upi-record","className":"page-module__AFzsIa__prevLink","children":["← ","How to Write a UPI Link"]}],"$L5"]}]]}]}],["$L6","$L7"],"$L8"]}],"loading":null,"isPartial":false}
+5:["$","$L4",null,{"href":"/documentation/clone-and-format","className":"page-module__AFzsIa__nextLink","children":["Cloning and Formatting"," →"]}]
+6:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1606471604c628fd.css","precedence":"next"}]
+7:["$","script","script-0",{"src":"/_next/static/chunks/5afdf35211684a88.js","async":true}]
+8:["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]
+b:null
